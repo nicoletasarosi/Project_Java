@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+
+<GridPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" stylesheets="@../css/stil.css" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.DataController">
+    <columnConstraints>
+        <ColumnConstraints hgrow="SOMETIMES" maxWidth="294.4000244140625" minWidth="10.0" prefWidth="206.4" />
+        <ColumnConstraints hgrow="SOMETIMES" maxWidth="546.3999633789062" minWidth="10.0" prefWidth="246.39998779296874" />
+        <ColumnConstraints hgrow="SOMETIMES" maxWidth="546.3999633789062" minWidth="10.0" prefWidth="148.0000122070312" />
+    </columnConstraints>
+    <rowConstraints>
+        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+    </rowConstraints>
+    <children>
+        <Label text="   Bine ati venit la aplicatia de gestiune a materiei MAP!" GridPane.columnSpan="3" />
+        <Label text="    Pentru a incepe introduceti data de inceput a anului universitar si apasati ENTER." wrapText="true" GridPane.columnSpan="3" GridPane.rowIndex="1" />
+        <Label text="    Zi" GridPane.rowIndex="2" />
+        <Label text="    Luna" GridPane.columnIndex="0" GridPane.rowIndex="3" />
+        <Label text="    An" GridPane.columnIndex="0" GridPane.rowIndex="4" />
+        <TextField fx:id="ziField" onAction="#onEnter" prefHeight="23.0" prefWidth="258.0" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+        <TextField fx:id="lunaField" onAction="#onEnter" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+        <TextField fx:id="anField" onAction="#onEnter" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+    </children>
+</GridPane>

@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+
+<BorderPane prefHeight="400.0" prefWidth="600.0"  xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.NotaController">
+    <left>
+        <TableView fx:id="tabel" editable="true" prefWidth="450" />
+    </left>
+    <center>
+        <GridPane>
+            <Label text="  Bine ati venit in meniul de gestiune a notelor materiei" wrapText="true" GridPane.columnIndex="0" GridPane.columnSpan="10" GridPane.rowIndex="0" />
+            <Label text="  MAP!" GridPane.columnIndex="0" GridPane.rowIndex="1" GridPane.columnSpan="4"/>
+            <Label GridPane.rowIndex="2" />
+            <Label text=" Cauta Student:" GridPane.columnIndex="0" GridPane.rowIndex="6" />
+            <TextField fx:id="studentField" GridPane.columnIndex="1" GridPane.rowIndex="6" />
+            <ComboBox fx:id="comboBoxStudent" prefHeight="26.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="7" />
+            <Label text="  Tema:" GridPane.rowIndex="8" />
+            <ComboBox fx:id="comboBoxTema" prefHeight="26.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="8" />
+            <Label text="  Zi:" GridPane.rowIndex="9" />
+            <TextField fx:id="ziField" prefWidth="20" GridPane.columnIndex="1" GridPane.rowIndex="9" />
+            <Label text="  Luna:" GridPane.rowIndex="10" />
+            <TextField fx:id="lunaField" GridPane.columnIndex="1" GridPane.rowIndex="10" />
+            <Label text="  An:" GridPane.rowIndex="11" />
+            <TextField fx:id="anField" GridPane.columnIndex="1" GridPane.rowIndex="11" />
+            <Label text="  Penalizare:" GridPane.rowIndex="12" />
+            <TextField fx:id="penalizareField" GridPane.columnIndex="1" GridPane.rowIndex="12" />
+            <Label text="  Motivare:" GridPane.rowIndex="13" />
+            <TextField fx:id="motivareField" GridPane.columnIndex="1" GridPane.rowIndex="13" />
+            <Label text="  Feedback:" GridPane.rowIndex="14" />
+            <TextArea fx:id="feedbackField" prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="14" />
+            <Label text="  Profesor:" GridPane.rowIndex="15" />
+            <TextField fx:id="profesorField" GridPane.columnIndex="1" GridPane.rowIndex="15" />
+            <Label GridPane.rowIndex="16" />
+            <Button fx:id="adaugaBut" onAction="#adauga" prefWidth="90" GridPane.rowIndex="17" />
+            <Button fx:id="stergeBut" onAction="#sterge" prefHeight="23.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="17" />
+            <Button fx:id="updateBut" onAction="#update" prefWidth="90" GridPane.columnIndex="2" GridPane.rowIndex="17" />
+            <Button fx:id="clearBut" onAction="#clear" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="18" />
+            <Label GridPane.rowIndex="19" />
+            <Label prefHeight="18.0" prefWidth="150.0" text="                    Rapoarte:" textAlignment="CENTER" GridPane.columnIndex="1" GridPane.rowIndex="20" />
+            <Label GridPane.rowIndex="21" />
+            <ComboBox fx:id="rapoarteCombo" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="22" />
+            <TextArea fx:id="rapoarteArea" prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="23" />
+            <Label GridPane.columnIndex="1" GridPane.rowIndex="24" />
+        </GridPane>
+    </center>
+    <top>
+        <MenuBar BorderPane.alignment="CENTER">
+            <menus>
+                <Menu mnemonicParsing="false" text="Navigare">
+                    <items>
+                        <MenuItem mnemonicParsing="false" onAction="#acasaMen" text="Acasa" />
+                        <MenuItem mnemonicParsing="false" onAction="#studentiMen" text="Studenti" />
+                        <MenuItem mnemonicParsing="false" onAction="#temeMen" text="Teme" />
+                    </items>
+                </Menu>
+            </menus>
+        </MenuBar>
+    </top>
+</BorderPane>

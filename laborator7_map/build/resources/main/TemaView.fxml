@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.cell.PropertyValueFactory?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+
+<BorderPane prefHeight="400.0" prefWidth="600.0"  xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.TemaController">
+    <left>
+        <TableView fx:id="tabel" editable="true" prefWidth="350">
+            <TableColumn text="descriere">
+                <cellValueFactory>
+                    <PropertyValueFactory property="descriere" />
+                </cellValueFactory>
+            </TableColumn>
+            <TableColumn text="startWeek">
+                <cellValueFactory>
+                    <PropertyValueFactory property="startWeek" />
+                </cellValueFactory>
+            </TableColumn>
+            <TableColumn text="deadlineWeek">
+                <cellValueFactory>
+                    <PropertyValueFactory property="deadlineWeek" />
+                </cellValueFactory>
+            </TableColumn>
+        </TableView>
+    </left>
+    <center>
+        <GridPane>
+            <Label text="Bine ati venit in meniul de gestiune a temelor materiei MAP!" wrapText="true" GridPane.columnIndex="0" GridPane.columnSpan="4" GridPane.rowIndex="0" />
+            <Label GridPane.columnIndex="0" GridPane.rowIndex="1" />
+            <Label text="Descriere:" GridPane.columnIndex="0" GridPane.rowIndex="6" />
+            <TextField fx:id="descriereField" prefWidth="20" GridPane.columnIndex="1" GridPane.rowIndex="6" />
+            <Label text="Deadline:" GridPane.columnIndex="0" GridPane.rowIndex="7" />
+            <TextField fx:id="deadlineWeekField" prefWidth="20" GridPane.columnIndex="1" GridPane.rowIndex="7" />
+            <Label GridPane.columnIndex="0" GridPane.rowIndex="10" />
+            <Button fx:id="adaugaBut" onAction="#adauga" prefWidth="90" GridPane.columnIndex="0" GridPane.rowIndex="11" />
+            <Button fx:id="stergeBut" onAction="#sterge" prefWidth="150" GridPane.columnIndex="1" GridPane.rowIndex="11" />
+            <Button fx:id="updateBut" onAction="#update" prefWidth="90" GridPane.columnIndex="2" GridPane.rowIndex="11" />
+            <Label GridPane.rowIndex="12" />
+            <Button fx:id="clearBut" onAction="#clear" prefWidth="150.0" GridPane.columnIndex="1" GridPane.rowIndex="13" />
+            <Label GridPane.rowIndex="14" />
+        </GridPane>
+    </center>
+    <top>
+        <MenuBar BorderPane.alignment="CENTER">
+            <menus>
+                <Menu mnemonicParsing="false" text="Navigare">
+                    <items>
+                        <MenuItem onAction="#acasaMen" mnemonicParsing="false" text="Acasa" />
+                        <MenuItem onAction="#studentiMen" mnemonicParsing="false" text="Studenti" />
+                        <MenuItem onAction="#noteMen" mnemonicParsing="false" text="Note" />
+                    </items>
+                </Menu>
+            </menus>
+        </MenuBar>
+    </top>
+</BorderPane>
